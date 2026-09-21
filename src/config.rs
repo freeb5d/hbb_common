@@ -114,7 +114,8 @@ const CHARS: &[char] = &[
     'm', 'n', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
 ];
 
-pub const RENDEZVOUS_SERVERS: &[&str] = &["remote.babol.ir"];
+// TODO: replace with your VPS IP/domain once it's set up, e.g. &["1.2.3.4"] or &["myserver.example.com"]
+pub const RENDEZVOUS_SERVERS: &[&str] = &["127.0.0.1"];
 pub const RS_PUB_KEY: &str = "Wyw1NrB9gd0fRNFXtZFTFKrnmUsk6pBRwjeBaNAZSrE=";
 
 pub const RENDEZVOUS_PORT: i32 = 21116;
