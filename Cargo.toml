@@ -58,6 +58,9 @@ tokio-rustls = { version = "0.26", features = [
     "ring",
 ], default-features = false }
 tokio-native-tls = "0.3"
+# vendored: force a statically-linked/vendored OpenSSL build so cross-compilation
+# in CI (cross-rs Docker images) doesn't depend on a system OpenSSL dev package.
+native-tls = { version = "0.2", features = ["vendored"] }
 tokio-tungstenite = { version = "0.26", features = ["native-tls", "rustls-tls-native-roots", "rustls-tls-webpki-roots"] }
 tungstenite = { version = "0.26", features = ["native-tls", "rustls-tls-native-roots", "rustls-tls-webpki-roots"] }
 rustls-platform-verifier = "0.6"
